@@ -1,0 +1,943 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>My Little Sketchbook</title>
+
+    <!-- Small CSS only for fonts -->
+    <style>
+      body {
+        font-family: "Playfair Display", serif;
+      }
+
+      .sketch-font {
+        font-family: "Caveat", cursive;
+      }
+
+      .sketch-carousel img {
+        height: 500px;
+        object-fit: contain;
+      }
+      .card-img-top {
+        height: 280px;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-white sketch-font" href="#">
+          ✏️ My Little Sketchbook
+        </a>
+
+        <!-- Mobile Toggle Button -->
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Menu -->
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- Home -->
+
+            <li class="nav-item">
+              <a
+                class="nav-link active text-white"
+                aria-current="page"
+                href="#home"
+              >
+                Home
+              </a>
+            </li>
+
+            <!-- My Sketches -->
+
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#sketches"> My Sketches </a>
+            </li>
+
+            <!-- Categories -->
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-white"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Categories
+              </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#sketches">
+                    ✏️ Pencil Sketches
+                  </a>
+                </li>
+
+              
+                <li>
+                  <a class="dropdown-item" href="#quotes"> 💭 Sketch Quotes </a>
+                </li>
+
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#about"> 🎨 My Art </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- About -->
+
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#about"> About </a>
+            </li>
+
+            <!-- Contact -->
+
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#contact"> Contact </a>
+            </li>
+          </ul>
+
+          <!-- Search -->
+
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search sketches"
+              aria-label="Search"
+            />
+
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= MAIN WEBSITE ================= -->
+
+    <main>
+      <div class="container">
+        <!-- ================= HERO SECTION ================= -->
+
+        <section id="home" class="py-5">
+          <div class="row align-items-center">
+            <!-- LEFT SIDE: INTRODUCTION -->
+            <div class="col-12 col-lg-5 text-center text-lg-start">
+              <p class="text-muted mb-2">✏️ A collection of little moments</p>
+
+              <h1 class="display-4 fw-bold">
+                My Little
+                <span class="sketch-font"> Sketchbook </span>
+              </h1>
+
+              <p class="lead">
+                Where simple pencil lines become stories, feelings and memories.
+              </p>
+
+              <p class="sketch-font fs-3">
+                "Every stroke holds a moment."
+              </p>
+
+              <a href="#sketches" class="btn btn-dark btn-lg">
+                Explore My Sketches
+              </a>
+            </div>
+
+            <!-- RIGHT SIDE: SKETCH CAROUSEL -->
+            <div class="col-12 col-lg-7 mt-4 mt-lg-0">
+              <div
+                id="sketchCarousel"
+                class="carousel slide shadow rounded overflow-hidden sketch-carousel"
+                data-bs-ride="carousel"
+                data-bs-interval="3000"
+              >
+                <div class="carousel-inner">
+                  <!-- Sketch 1 -->
+                  <div class="carousel-item active">
+                    <img
+                      src="sketch/01_sketch_collection.jpg"
+                      class="d-block w-100"
+                      alt="Pencil Sketch 1"
+                    />
+                  </div>
+
+                  <!-- Sketch 2 -->
+                  <div class="carousel-item">
+                    <img
+                      src="sketch/05_ganesha_sketch.jpg"
+                      class="d-block w-100"
+                      alt="Pencil Sketch 2"
+                    />
+                  </div>
+
+                  <!-- Sketch 3 -->
+                  <div class="carousel-item">
+                    <img
+                      src="sketch/04_krishna_sketch.jpg"
+                      class="d-block w-100"
+                      alt="Pencil Sketch 3"
+                    />
+                  </div>
+
+                  <!-- Sketch 4 -->
+                  <div class="carousel-item">
+                    <img
+                      src="sketch/image3(1).jpeg"
+                      class="d-block w-100"
+                      alt="Pencil Sketch 4"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="sketch/bird.jpeg"
+                      class="d-block w-100"
+                      alt="Pencil Sketch 5"
+                    />
+                  </div>
+                </div>
+
+                <!-- Previous Button -->
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#sketchCarousel"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon" aria-hidden="true">
+                  </span>
+
+                  <span class="visually-hidden"> Previous </span>
+                </button>
+
+                <!-- Next Button -->
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#sketchCarousel"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon" aria-hidden="true">
+                  </span>
+
+                  <span class="visually-hidden"> Next </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ================= FEATURED SKETCHES ================= -->
+
+        <section id="sketches" class="py-5">
+          <div class="text-center mb-5">
+            <span class="badge text-bg-dark mb-2"> My Creative Journal </span>
+
+            <h2 class="display-6 fw-bold">Stories Behind My Sketches</h2>
+
+            <p class="text-muted">
+              Every sketch captures a thought, a feeling, or a little moment.
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <!-- Card 1 -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card h-100 shadow-sm border-0">
+                <img
+                  src="sketch/05_ganesha_sketch.jpg"
+                  class="card-img-top"
+                  alt="Ganesha Pencil Sketch"
+                />
+
+                <div class="card-body">
+                  <span class="badge text-bg-warning mb-2">
+                    Doodle Art
+             
+                  </span>
+
+                  <h3 class="h4 card-title">Drawing With Patience</h3>
+
+                  <p class="card-text text-muted">
+                    With closed eyes and a peaceful heart, creativity flows.Even on ruled lines, a majestic soul finds its space.
+                  </p>
+
+                
+                </div>
+
+                <div class="card-footer bg-white border-0 text-muted">
+                  <small>✏️ Pencil Sketch • My Art Journal</small>
+                </div>
+              </article>
+            </div>
+
+            <!-- Card 2 -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card h-100 shadow-sm border-0">
+                <img
+                  src="sketch/krishna4.jpeg"
+                  class="card-img-top"
+                  alt="Krishna Pencil Sketch"
+                />
+
+                <div class="card-body">
+                  <span class="badge text-bg-primary mb-2"> Portrait Art </span>
+
+                  <h3 class="h4 card-title">Finding Beauty in Details</h3>
+
+                  <p class="card-text text-muted">
+                    Little Krishna spreading love and lotus blessings.
+                  </p>
+
+              
+                </div>
+
+                <div class="card-footer bg-white border-0 text-muted">
+                  <small>🎨 Portrait • Sketch Journal</small>
+                </div>
+              </article>
+            </div>
+
+            <!-- Card 3 -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card h-100 shadow-sm border-0">
+                <img
+                  src="sketch/bird.jpeg"
+                  class="card-img-top"
+                  alt="Flower Pencil Sketch"
+                />
+
+                <div class="card-body">
+                  <span class="badge text-bg-success mb-2"> Freedom </span>
+
+                  <h3 class="h4 card-title">Little Things Matter</h3>
+
+                  <p class="card-text text-muted">
+                    Life breaks through constraints to find its own light and freedom.
+                  </p>
+                </div>
+                <div class="card-footer bg-white border-0 text-muted">
+                  <small>🌿 Nature • Creative Moment</small>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+       
+        <!-- ================= SKETCH COLLECTION ================= -->
+
+        <section class="py-5">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+              <span class="badge text-bg-secondary"> COLLECTION </span>
+
+              <h2 class="fw-bold mt-2">More From My Sketchbook</h2>
+            </div>
+
+            <span class="text-muted d-none d-md-block">
+              9+ Creative Moments
+            </span>
+          </div>
+
+          <div class="row g-4">
+            <!-- Sketch -->
+
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="sketch/shiv.jpeg"
+                  class="card-img-top"
+                  alt="Shiv Sketch"
+                />
+
+                <div class="card-body">
+                  <h5 class="card-title">Just Believe </h5>
+
+                  <p class="card-text text-muted">
+                    Find peace in every line and strength in your belief.Let devotion guide your mind to a state of absolute calm
+                  </p>
+
+                  <span class="badge text-bg-light"> Deity Portraits </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sketch -->
+
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="sketch/sai.jpeg"
+                  class="card-img-top"
+                  alt="Sai Sketch"
+                />
+
+                <div class="card-body">
+                  <h5 class="card-title">A Peaceful Expression</h5>
+
+                  <p class="card-text text-muted">
+                    Finding calmness through creativity.
+                  </p>
+
+                  <span class="badge text-bg-light"> Portrait </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sketch -->
+
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="sketch/image3(1).jpeg"
+                  class="card-img-top"
+                  alt="ganesh Sketch"
+                />
+
+                <div class="card-body">
+                  <h5 class="card-title">lord Ganesha</h5>
+
+                  <p class="card-text text-muted">
+                   A quiet mind holding infinite power.
+                  </p>
+
+                  <span class="badge text-bg-light"> Devotional Art </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sketch -->
+
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="sketch/jally.jpeg"
+                  class="card-img-top"
+                  alt="Creative Sketch"
+                />
+
+                <div class="card-body">
+                  <h5 class="card-title">A Random Idea</h5>
+
+                  <p class="card-text text-muted">
+                    Not every sketch needs a reason. Sometimes creativity simply
+                    happens.
+                  </p>
+
+                  <span class="badge text-bg-light"> Creativity </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sketch -->
+
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="sketch/cute tady.jpeg"
+                  class="card-img-top"
+                  alt="Cute Teddy Sketch"
+                />
+
+                <div class="card-body">
+                  <h5 class="card-title">Little Happiness</h5>
+
+                  <p class="card-text text-muted">
+                    Cute little drawings can make an ordinary day feel special.
+                  </p>
+
+                  <span class="badge text-bg-light"> Cute Art </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sketch -->
+
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="sketch/sktech tady.jpeg"
+                  class="card-img-top"
+                  alt=" Sketch"
+                />
+
+                <div class="card-body">
+                  <h5 class="card-title">Small Sketching</h5>
+
+                  <p class="card-text text-muted">
+                    Just a little bear in a big honey pot.
+                  </p>
+
+                  <span class="badge text-bg-light"> Honey pot </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ================= QUOTE SECTION ================= -->
+
+        <section id="quotes" class="py-5">
+          <div class="text-center mb-5">
+            <span class="badge text-bg-dark"> WORDS & ART </span>
+
+            <h2 class="fw-bold mt-2">Thoughts Behind The Sketches</h2>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-md-6">
+              <div class="card border-0 shadow-sm h-100">
+                <img
+                  src="sketch/quotes1.jpeg"
+                  class="card-img-top"
+                  alt="Sketch Quote"
+                />
+
+                <div class="card-body">
+                  <blockquote class="blockquote mb-0">
+                    <p>"Some days I'm okay, and some days I don't even know what I'm feeling."</p>
+
+                    <footer class="blockquote-footer">
+                      From my sketchbook
+                    </footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card border-0 shadow-sm h-100">
+                <img
+                  src="sketch/quotes2.jpeg"
+                  class="card-img-top"
+                  alt="Sketch Quote"
+                />
+
+                <div class="card-body">
+                  <blockquote class="blockquote mb-0">
+                    <p>"Wings of change and Colors of hope."</p>
+
+                    <footer class="blockquote-footer">Creative thought</footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card border-0 shadow-sm h-100">
+                <img
+                  src="sketch/quotes3.jpeg"
+                  class="card-img-top"
+                  alt="Sketch Quote"
+                />
+
+                <div class="card-body">
+                  <blockquote class="blockquote mb-0">
+                    <p>“Every line has a story.”</p>
+
+                    <footer class="blockquote-footer">
+                      My Little Sketchbook
+                    </footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card border-0 shadow-sm h-100">
+                <img
+                  src="sketch/quotes4.jpeg"
+                  class="card-img-top"
+                  alt="Sketch Quote"
+                />
+
+                <div class="card-body">
+                  <blockquote class="blockquote mb-0">
+                    <p>“Log humari Zindagi mein kayi wajah se aate hein, Lekin jo reh jaate hein unka saath sabse Sunder hota hai !!! ”</p>
+
+                    <footer class="blockquote-footer"> Musafir Cafe.</footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+                <!-- ================= ABOUT ME ================= -->
+
+<section id="about" class="py-5">
+
+  <div class="row align-items-center g-5">
+
+    <!-- LEFT : IMAGE -->
+
+    <div class="col-12 col-lg-5">
+
+      <div class="card border-0 shadow-sm">
+
+        <img
+          src="sketch/study laptop.jpeg"
+          class="img-fluid rounded"
+          alt="My Sketching Journey"
+        >
+
+      </div>
+
+    </div>
+
+
+    <!-- RIGHT : ABOUT CONTENT -->
+
+    <div class="col-12 col-lg-7">
+
+      <span class="badge text-bg-dark mb-3">
+        ABOUT ME
+      </span>
+
+      <h2 class="display-5 fw-bold">
+        A Little About
+        <span class="sketch-font">
+          Me
+        </span>
+      </h2>
+
+      <p class="lead text-muted">
+        Hi! I'm the person behind
+        <strong>My Little Sketchbook.</strong>
+      </p>
+
+      <p>
+        I enjoy turning simple ideas into pencil sketches.
+        For me, sketching is more than just drawing — it's
+        a quiet way to express thoughts, feelings and
+        imagination.
+      </p>
+
+      <p>
+        Some of my sketches are inspired by nature,
+        some by people and moments around me, and some
+        simply come from an idea that I wanted to put
+        on paper.
+      </p>
+
+
+      <!-- Small Highlights -->
+
+      <div class="row g-3 mt-4">
+
+        <div class="col-6 col-md-4">
+
+          <div class="border rounded p-3 h-100 text-center">
+
+            <h3 class="fw-bold mb-1">
+              ✏️
+            </h3>
+
+            <small class="text-muted">
+              Pencil Art
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <div class="col-6 col-md-4">
+
+          <div class="border rounded p-3 h-100 text-center">
+
+            <h3 class="fw-bold mb-1">
+              🌿
+            </h3>
+
+            <small class="text-muted">
+              Nature Inspired
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <div class="col-6 col-md-4">
+
+          <div class="border rounded p-3 h-100 text-center">
+
+            <h3 class="fw-bold mb-1">
+              💭
+            </h3>
+
+            <small class="text-muted">
+              Creative Thoughts
+            </small>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Quote -->
+
+      <figure class="mt-4">
+
+        <blockquote class="blockquote">
+
+          <p class="sketch-font fs-3">
+            "I don't just draw pictures,
+            I draw the little things I feel."
+          </p>
+
+        </blockquote>
+
+      </figure>
+
+    </div>
+
+  </div>
+
+</section>
+        <!-- ================= CREATIVE INTERESTS ================= -->
+
+        <section class="py-5">
+          <div class="text-center mb-5">
+            <span class="badge text-bg-secondary"> BEYOND SKETCHING </span>
+
+            <h2 class="fw-bold mt-2">Things That Inspire Me</h2>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-md-4">
+              <div class="card h-100 border-0 shadow-sm">
+                <img
+                  src="sketch/study laptop.jpeg"
+                  class="card-img-top"
+                  alt="Study and Laptop"
+                />
+
+                <div class="card-body">
+                  <h5 class="card-title">Learning</h5>
+
+                  <p class="card-text text-muted">
+                    Learning new things gives me new ideas to explore
+                    creatively.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="card h-100 border-0 shadow-sm">
+                <img
+                  src="sketch/hobby singing.jpeg"
+                  class="card-img-top"
+                  alt="Singing Hobby"
+                />
+
+                <div class="card-body">
+                  <h5 class="card-title">Music</h5>
+
+                  <p class="card-text text-muted">
+                    Music is another way I express feelings and find
+                    inspiration.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="card h-100 border-0 shadow-sm">
+                <img
+                  src="sketch/flower.jpeg"
+                  class="card-img-top"
+                  alt="Nature"
+                />
+
+                <div class="card-body">
+                  <h5 class="card-title">Nature</h5>
+
+                  <p class="card-text text-muted">
+                    Nature gives endless ideas for lines, shapes and textures.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+       
+          <section id="contact" class="py-5">
+         <!-- ================= FOOTER ================= -->
+
+<footer class="bg-dark text-white mt-5">
+
+  <div class="container py-5">
+
+    <div class="row g-4">
+
+      <!-- Brand -->
+
+      <div class="col-12 col-md-5">
+
+        <h3 class="sketch-font">
+          ✏️ My Little Sketchbook
+        </h3>
+
+        <p class="text-white-50 mb-0">
+          A little collection of sketches, thoughts
+          and creative moments.
+        </p>
+
+      </div>
+
+
+      <!-- Explore -->
+
+      <div class="col-6 col-md-3">
+
+        <h6 class="fw-bold mb-3">
+          Explore
+        </h6>
+
+        <ul class="list-unstyled">
+
+          <li class="mb-2">
+            <a href="#home"
+               class="text-white-50 text-decoration-none">
+              Home
+            </a>
+          </li>
+
+          <li class="mb-2">
+            <a href="#sketches"
+               class="text-white-50 text-decoration-none">
+              My Sketches
+            </a>
+          </li>
+
+          <li class="mb-2">
+            <a href="#quotes"
+               class="text-white-50 text-decoration-none">
+              Sketch Quotes
+            </a>
+          </li>
+
+          <li>
+            <a href="#about"
+               class="text-white-50 text-decoration-none">
+              About My Art
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- Connect -->
+
+      <div class="col-6 col-md-4">
+
+        <h6 class="fw-bold mb-3">
+          Connect
+        </h6>
+
+        <p class="text-white-50">
+          Have an idea or simply want to say hello?
+        </p>
+
+        <a href="#contact"
+           class="btn btn-outline-light btn-sm">
+          Say Hello ✏️
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <hr class="border-secondary my-4">
+
+
+    <!-- Bottom Footer -->
+
+    <div class="row align-items-center">
+
+      <div class="col-12 col-md-6 text-center text-md-start">
+
+        <p class="mb-0 text-white-50">
+          © 2026 My Little Sketchbook
+        </p>
+
+      </div>
+
+
+      <div class="col-12 col-md-6 text-center text-md-end mt-2 mt-md-0">
+
+        <a href="#"
+           class="text-white-50 text-decoration-none me-3">
+          Privacy
+        </a>
+
+        <a href="#"
+           class="text-white-50 text-decoration-none me-3">
+          Terms
+        </a>
+
+        <a href="#home"
+           class="text-white text-decoration-none">
+          ↑ Back to top
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+        
+        </section>
+      </div>
+    </main>
+
+    <!-- ================= BOOTSTRAP JS ================= -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
